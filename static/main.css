@@ -1,0 +1,83 @@
+body{
+    background-image : url(https://img.freepik.com/vetores-gratis/protetor-de-tela-de-textura-elegante-branco_23-2148424287.jpg?t=st=1662370383~exp=1662370983~hmac=e9d1c680be57b2fff7c2dcda705cb798a776ec06d38199cef237371b12a587fd)
+    }
+
+.card{
+    border:none;
+
+    position:relative;
+    overflow:hidden;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.card:before{
+
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:4px;
+    height:100%;
+    background-color:;
+    transform:scaleY(1);
+    transition:all 0.5s;
+    transform-origin: bottom
+}
+
+.card:after{
+
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    width:4px;
+    height:100%;
+    background-color:;
+    transform:scaleY(0);
+    transition:all 0.5s;
+    transform-origin: bottom
+}
+
+.card:hover::after{
+    transform:scaleY(1);
+}
+
+
+.fonts{
+    font-size:11px;
+}
+
+.social-list{
+    display:flex;
+    list-style:none;
+    justify-content:center;
+    padding:0;
+}
+
+.social-list li{
+    padding:10px;
+    color:#005eb8;
+    font-size:19px;
+}
+
+
+.buttons button:nth-child(1){
+       border:1px solid #005eb8 !important;
+       color:#005eb8;
+       height:40px;
+}
+
+.buttons button:nth-child(1):hover{
+       border:1px solid #8E24AA !important;
+       color:#fff;
+       height:40px;
+       background-color:#005eb8;
+}
+
+.buttons button:nth-child(2){
+       border:1px solid #005eb8 !important;
+       background-color:#005eb8;
+       color:#fff;
+        height:40px;
+}

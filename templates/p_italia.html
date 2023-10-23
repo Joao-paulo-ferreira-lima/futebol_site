@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block main %}
+<div align="center">
+  <h3>Rodada</h3>
+    <p>{{jogos}}</p>
+  <form method="POST" action="" >
+    {{ form_rodada.csrf_token }}
+    <fieldset>
+      {{ form_rodada.rodada.label }}
+      {%if form_rodada.rodada.errors%}
+        {%for erro in form_rodada.rodada.errors%}
+          {{erro}}
+        {%endfor%}
+      {%endif%}
+      {{ form_rodada.rodada }}
+      {{ form_rodada.botao(class="btn btn-primary mt-0") }}
+    </fieldset>
+  </form>
+</div>
+<div class="container">
+  <h1 align="center">Tabela de jogos Campeonato Italiano</h1>
+
+    <table class="table table-borderless table-sm table-hover">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for i in lista %}
+        <tr>
+          <th scope="row"></th>
+          <td align="right"><strong>{{i['homeTeam']['shortName']}}</strong></td>
+          <td><img src="{{i['homeTeam']['crest']}}" width="25" height="25" alt="logo" ></td>
+          <td><strong>{{i['score']['fullTime']['home']}}</strong></td>
+          <td>VS</td>
+          <td><strong>{{i['score']['fullTime']['away']}}</strong></td>
+          <td><img src="{{i['awayTeam']['crest']}}" width="25" height="25" alt="logo" ></td>
+          <td align="left"><strong>{{i['awayTeam']['shortName']}}</strong></td>
+
+
+        </tr>
+      {% endfor%}
+      </tbody>
+    </table>
+</div>
+{% endblock %}

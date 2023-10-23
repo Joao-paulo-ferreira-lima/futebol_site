@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="container">
+    <table class="table table-sm table-bordered table-condensed table-hover">
+      <thead>
+        <tr class=>
+          <th scope="col"></th>
+          <th scope="col">pos</th>
+          <th scope="col">Times</th>
+          <th scope="col">pts</th>
+          <th scope="col">Jogos</th>
+          <th scope="col">Vit</th>
+          <th scope="col">Emp</th>
+          <th scope="col">Derr</th>
+          <th scope="col">Gols</th>
+          <th scope="col">Sofridos</th>
+          <th scope="col">Saldo</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for i in lista_posicao%}
+        <tr>
+          <th scope="row"><img src="{{i['team']['crest']}}" width="25" height="25" alt="logo" ></th>
+          <td>{{i['position']}}</td>
+          <td><strong>{{i['team']['shortName']}}</strong></td>
+          <td>{{i['points']}}</td>
+          <td>{{i['playedGames']}}</td>
+          <td>{{i['won']}}</td>
+          <td>{{i['draw']}}</td>
+          <td>{{i['lost']}}</td>
+          <td>{{i['goalsFor']}}</td>
+          <td>{{i['goalsAgainst']}}</td>
+          <td>{{i['goalDifference']}}</td>
+        </tr>
+      {%endfor %}
+      </tbody>
+    </table>
+</div>
+{% endblock %}
