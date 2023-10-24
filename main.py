@@ -21,7 +21,7 @@ def C_brasil():
     brasil = 'BSA'
 
     url = f'http://api.football-data.org/v4/competitions/{brasil}/standings'
-    headers = {'X-Auth-Token': '1f4173cba77f44a9b0cafd42e483f4ea'}
+    headers = api_key
 
     response = requests.get(url, headers=headers)
     brasil = response.json()
@@ -36,7 +36,7 @@ def C_brasil():
 def C_espanha():
     espanha = 'PD'
     url = f'http://api.football-data.org/v4/competitions/{espanha}/standings'
-    headers = {'X-Auth-Token': '1f4173cba77f44a9b0cafd42e483f4ea'}
+    headers = api_key
 
     response = requests.get(url, headers=headers)
     brasil = response.json()
@@ -51,7 +51,7 @@ def C_espanha():
 def C_portugal():
     portugal = 'PPL'
     url = f'http://api.football-data.org/v4/competitions/{portugal}/standings'
-    headers = {'X-Auth-Token': '1f4173cba77f44a9b0cafd42e483f4ea'}
+    headers = api_key
 
     response = requests.get(url, headers=headers)
     brasil = response.json()
@@ -66,7 +66,7 @@ def C_portugal():
 def C_italia():
     italia = 'SA'
     url = f'http://api.football-data.org/v4/competitions/{italia}/standings'
-    headers = {'X-Auth-Token': '1f4173cba77f44a9b0cafd42e483f4ea'}
+    headers = api_key
 
     response = requests.get(url, headers=headers)
     italia = response.json()
@@ -79,7 +79,7 @@ def C_italia():
 def C_alemanha():
     alemanha = 'BL1'
     url = f'http://api.football-data.org/v4/competitions/{alemanha}/standings'
-    headers = {'X-Auth-Token': '1f4173cba77f44a9b0cafd42e483f4ea'}
+    headers = api_key
 
     response = requests.get(url, headers=headers)
     italia = response.json()
@@ -92,7 +92,7 @@ def C_alemanha():
 def C_holanda():
     holanda = 'DED'
     url = f'http://api.football-data.org/v4/competitions/{holanda}/standings'
-    headers = {'X-Auth-Token': '1f4173cba77f44a9b0cafd42e483f4ea'}
+    headers = api_key
 
     response = requests.get(url, headers=headers)
     italia = response.json()
@@ -105,7 +105,7 @@ def C_holanda():
 def C_ingles():
     ingles = 'PL'
     url = f'http://api.football-data.org/v4/competitions/{ingles}/standings'
-    headers = {'X-Auth-Token': '1f4173cba77f44a9b0cafd42e483f4ea'}
+    headers = api_key
 
     response = requests.get(url, headers=headers)
     italia = response.json()
@@ -118,7 +118,7 @@ def C_ingles():
 def C_franca():
     franca = 'FL1'
     url = f'http://api.football-data.org/v4/competitions/{franca}/standings'
-    headers = {'X-Auth-Token': '1f4173cba77f44a9b0cafd42e483f4ea'}
+    headers = api_key
 
     response = requests.get(url, headers=headers)
     italia = response.json()
@@ -134,7 +134,7 @@ def p_brasil():
     brasil = 'BSA'
     rodada = form_rodada.rodada.data
     url = f'http://api.football-data.org/v4/competitions/{brasil}/standings'
-    headers = {'X-Auth-Token': '1f4173cba77f44a9b0cafd42e483f4ea'}
+    headers = api_key
     user = request.form.get('RODADA')
     response = requests.get(url, headers=headers)
     italia = response.json()
@@ -163,7 +163,7 @@ def p_espanha():
     espanha = 'PD'
     rodada = form_rodada.rodada.data
     url = f'http://api.football-data.org/v4/competitions/{espanha}/standings'
-    headers = {'X-Auth-Token': '1f4173cba77f44a9b0cafd42e483f4ea'}
+    headers = api_key
     user = request.form.get('RODADA')
     response = requests.get(url, headers=headers)
     italia = response.json()
@@ -191,7 +191,7 @@ def p_portugal():
     portugal = 'PPL'
     rodada = form_rodada.rodada.data
     url = f'http://api.football-data.org/v4/competitions/{portugal}/standings'
-    headers = {'X-Auth-Token': '1f4173cba77f44a9b0cafd42e483f4ea'}
+    headers = api_key
     user = request.form.get('RODADA')
     response = requests.get(url, headers=headers)
     italia = response.json()
@@ -219,7 +219,7 @@ def p_italia():
     italia = 'SA'
     rodada = form_rodada.rodada.data
     url = f'http://api.football-data.org/v4/competitions/{italia}/standings'
-    headers = {'X-Auth-Token': '1f4173cba77f44a9b0cafd42e483f4ea'}
+    headers = api_key
     user = request.form.get('RODADA')
     response = requests.get(url, headers=headers)
     italia1 = response.json()
@@ -248,7 +248,7 @@ def p_alemanha():
     alemanha = 'BL1'
     rodada = form_rodada.rodada.data
     url = f'http://api.football-data.org/v4/competitions/{alemanha}/standings'
-    headers = {'X-Auth-Token': '1f4173cba77f44a9b0cafd42e483f4ea'}
+    headers = api_key
     user = request.form.get('RODADA')
     response = requests.get(url, headers=headers)
     alemanha1 = response.json()
@@ -277,7 +277,7 @@ def p_holanda():
     holanda = 'DED'
     rodada = form_rodada.rodada.data
     url = f'http://api.football-data.org/v4/competitions/{holanda}/standings'
-    headers = {'X-Auth-Token': '1f4173cba77f44a9b0cafd42e483f4ea'}
+    headers = api_key
     user = request.form.get('RODADA')
     response = requests.get(url, headers=headers)
     holanda1 = response.json()
@@ -306,7 +306,7 @@ def p_ingles():
     ingles = 'PL'
     rodada = form_rodada.rodada.data
     url = f'http://api.football-data.org/v4/competitions/{ingles}/standings'
-    headers = {'X-Auth-Token': '1f4173cba77f44a9b0cafd42e483f4ea'}
+    headers = api_key
     user = request.form.get('RODADA')
     response = requests.get(url, headers=headers)
     ingles1 = response.json()
@@ -334,7 +334,7 @@ def p_franca():
     franca = 'FL1'
     rodada = form_rodada.rodada.data
     url = f'http://api.football-data.org/v4/competitions/{franca}/standings'
-    headers = {'X-Auth-Token': '1f4173cba77f44a9b0cafd42e483f4ea'}
+    headers = api_key
     user = request.form.get('RODADA')
     response = requests.get(url, headers=headers)
     franca1 = response.json()
